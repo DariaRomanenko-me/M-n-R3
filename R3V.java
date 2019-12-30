@@ -39,16 +39,4 @@ public class R3V {
         c += a.z * b.z;
         return c;
     }
-
-    public static R3V mulVec(R3V a, R3V b){
-        R3V c = new R3V(0, 0, 0);
-        c.x = a.y * b.z - a.z * b.y;
-        c.y = a.z * b.x - a.x * b.z;
-        c.z = a.x * b.y - a.y * b.z;
-        return c;
-    }
-
-    public static int mulMix(R3V a, R3V b, R3V c){
-        return scal((mulVec(a, b)), c);
-    }
 }
